@@ -1,0 +1,200 @@
+[
+      {
+        "product_id": 1,
+        "product_title": "MacBook Pro 16-inch",
+        "product_image": "https://i.ibb.co.com/x4BD371/Mac-Book-Pro-16-inch.jpg",
+        "category": "Laptop",
+        "price": 2499.99,
+        "description": "Apple MacBook Pro 16-inch with M2 Pro chip.",
+        "Specification": ["M2 Pro Chip", "16GB RAM", "512GB SSD"],
+        "availability": true,
+        "rating": 4.9
+      },
+      {
+        "product_id": 2,
+        "product_title": "MacBook Air 13-inch",
+        "product_image": "https://i.ibb.co.com/kVTc11sr/Mac-Book-Air-M3-13-Inch-Midnight-7621.jpg",
+        "category": "Laptop",
+        "price": 1199.99,
+        "description": "Apple MacBook Air 13-inch with M2 chip.",
+        "Specification": ["M2 Chip", "8GB RAM", "256GB SSD"],
+        "availability": true,
+        "rating": 4.7
+      },
+      {
+        "product_id": 3,
+        "product_title": "MacBook Pro 14-inch",
+        "product_image": "https://i.ibb.co.com/RTDn5wLG/Mac-Book-Pro-M2-Pro-Space-Grey-a-5196.jpg",
+        "category": "Laptop",
+        "price": 1999.99,
+        "description": "Apple MacBook Pro 14-inch with M2 Pro chip.",
+        "Specification": ["M2 Pro Chip", "16GB RAM", "512GB SSD"],
+        "availability": true,
+        "rating": 4.8
+      },
+      {
+        "product_id": 4,
+        "product_title": "Dell XPS 15",
+        "product_image": "https://i.ibb.co.com/218V5YDq/Dell-XPS-15-9530-a-4532.jpg",
+        "category": "Laptop",
+        "price": 1899.99,
+        "description": "Dell XPS 15 with 12th Gen Intel Core i7.",
+        "Specification": ["Intel Core i7", "16GB RAM", "512GB SSD"],
+        "availability": true,
+        "rating": 4.6
+      },
+      {
+        "product_id": 5,
+        "product_title": "HP Spectre x360",
+        "product_image": "https://i.ibb.co.com/5hDydHWR/HP-Spectre-14-EU0013-DX-a-7526.jpg",
+        "category": "Laptop",
+        "price": 1499.99,
+        "description": "HP Spectre x360 Convertible with OLED display.",
+        "Specification": ["Intel Core i7", "16GB RAM", "1TB SSD"],
+        "availability": true,
+        "rating": 4.7
+      },
+      {
+        "product_id": 6,
+        "product_title": "Lenovo ThinkPad X1 Carbon",
+        "product_image": "https://i.ibb.co.com/cXQVB7tn/Lenovo-Think-Pad-X1-NANO-Gen-1-8971.jpg",
+        "category": "Laptop",
+        "price": 1699.99,
+        "description": "Lenovo ThinkPad X1 Carbon Gen 10 for business professionals.",
+        "Specification": ["Intel Core i7", "16GB RAM", "512GB SSD"],
+        "availability": true,
+        "rating": 4.8
+      },
+      {
+        "product_id": 7,
+        "product_title": "iPhone 14 Pro Max",
+        "product_image": "https://i.ibb.co.com/spvXhFL5/i-Phone-14-Pro-Space-Black-1138.jpg",
+        "category": "Phone",
+        "price": 1099.99,
+        "description": "Apple iPhone 14 Pro Max with A16 Bionic chip.",
+        "Specification": ["A16 Bionic", "6.7-inch Display", "48MP Camera"],
+        "availability": true,
+        "rating": 4.9
+      },
+      {
+        "product_id": 8,
+        "product_title": "iPhone 13",
+        "product_image": "https://i.ibb.co.com/PZHzGxNM/i-Phone-13-9214.jpg",
+        "category": "Phone",
+        "price": 799.99,
+        "description": "Apple iPhone 13 with A15 Bionic chip.",
+        "Specification": ["A15 Bionic", "6.1-inch Display", "Dual Camera"],
+        "availability": true,
+        "rating": 4.7
+      },
+      {
+        "product_id": 9,
+        "product_title": "Samsung Galaxy S23 Ultra",
+        "product_image": "https://i.ibb.co.com/v6hbRHWN/Galaxy-S23-Ultra-Cream-1280.jpg",
+        "category": "Phone",
+        "price": 1199.99,
+        "description": "Samsung Galaxy S23 Ultra with Snapdragon 8 Gen 2.",
+        "Specification": ["Snapdragon 8 Gen 2", "6.8-inch Display", "108MP Camera"],
+        "availability": true,
+        "rating": 4.8
+      },
+      {
+        "product_id": 10,
+        "product_title": "Google Pixel 7 Pro",
+        "product_image": "https://i.ibb.co.com/sJ93rSrh/Pixel-7-Pro-Obsidian-8439.jpg",
+        "category": "Phone",
+        "price": 899.99,
+        "description": "Google Pixel 7 Pro with Tensor G2 chip.",
+        "Specification": ["Tensor G2", "6.7-inch Display", "50MP Camera"],
+        "availability": true,
+        "rating": 4.7
+      },
+      {
+        "product_id": 11,
+        "product_title": "OnePlus 11",
+        "product_image": "https://i.ibb.co.com/4RpGJ4Ry/One-Plus-11-1-7783.jpg",
+        "category": "Phone",
+        "price": 999.99,
+        "description": "OnePlus 11 with Snapdragon 8 Gen 2 chip.",
+        "Specification": ["Snapdragon 8 Gen 2", "6.7-inch Display", "50MP Camera"],
+        "availability": true,
+        "rating": 4.7
+      },
+      {
+        "product_id": 12,
+        "product_title": "Xiaomi 13 Pro",
+        "product_image": "https://i.ibb.co.com/MDCTfHjF/Xiaomi-13-Pro-Ceramic-Black-4613.jpg",
+        "category": "Phone",
+        "price": 1099.99,
+        "description": "Xiaomi 13 Pro with Snapdragon 8 Gen 2 chip.",
+        "Specification": ["Snapdragon 8 Gen 2", "6.73-inch Display", "50MP Camera"],
+        "availability": true,
+        "rating": 4.8
+      },
+      {
+        "product_id": 13,
+        "product_title": "Sony WH-1000XM5",
+        "product_image": "https://i.ibb.co.com/fYWFFzLp/Sony-WH-1000-XM5.jpg",
+        "category": "Accessories",
+        "price": 349.99,
+        "description": "Sony WH-1000XM5 Noise Cancelling Headphones.",
+        "Specification": ["Noise Cancelling", "30 Hours Battery", "Bluetooth 5.2"],
+        "availability": true,
+        "rating": 4.9
+      },
+      {
+        "product_id": 14,
+        "product_title": "Apple AirPods Pro 2",
+        "product_image": "https://i.ibb.co.com/JV1RNn7/Apple-Air-Pods-Pro-2.jpg",
+        "category": "Accessories",
+        "price": 249.99,
+        "description": "Apple AirPods Pro 2 with H2 Chip.",
+        "Specification": ["H2 Chip", "Active Noise Cancellation", "Spatial Audio"],
+        "availability": true,
+        "rating": 4.8
+      },
+      {
+        "product_id": 15,
+        "product_title": "Samsung Galaxy Buds 2 Pro",
+        "product_image": "https://i.ibb.co.com/kgrRk5J8/Galaxy-Buds2-Pro-Black-a-8974-6051.jpg",
+        "category": "Accessories",
+        "price": 199.99,
+        "description": "Samsung Galaxy Buds 2 Pro with ANC.",
+        "Specification": ["Active Noise Cancelling", "22 Hours Battery", "Bluetooth 5.3"],
+        "availability": true,
+        "rating": 4.7
+      },
+      {
+        "product_id": 16,
+        "product_title": "Apple Watch Series 8",
+        "product_image": "https://i.ibb.co.com/KpCgCMcS/Apple-Watch-Series-8.jpg",
+        "category": "Smartwatch",
+        "price": 399.99,
+        "description": "Apple Watch Series 8 with Blood Oxygen Monitoring.",
+        "Specification": ["Blood Oxygen", "ECG", "Always-On Retina Display"],
+        "availability": true,
+        "rating": 4.8
+      },
+      {
+        "product_id": 17,
+        "product_title": "Samsung Galaxy Watch 5 Pro",
+        "product_image": "https://i.ibb.co.com/wN2ZqgGM/Galaxy-Watch6-Classic-Black-7790.jpg",
+        "category": "Smartwatch",
+        "price": 449.99,
+        "description": "Samsung Galaxy Watch 5 Pro with Advanced Health Features.",
+        "Specification": ["Advanced Health", "GPS", "Pro Display"],
+        "availability": true,
+        "rating": 4.7
+      },
+      {
+        "product_id": 18,
+        "product_title": "Garmin Fenix 7",
+        "product_image": "https://i.ibb.co.com/wN2ZqgGM/Galaxy-Watch6-Classic-Black-7790.jpg",
+        "category": "Smartwatch",
+        "price": 649.99,
+        "description": "Garmin Fenix 7 Multisport GPS Watch.",
+        "Specification": ["Multisport GPS", "Heart Rate Monitor", "Solar Charging"],
+        "availability": true,
+        "rating": 4.9
+      }
+    ]
