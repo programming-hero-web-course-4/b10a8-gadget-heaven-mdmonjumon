@@ -1,10 +1,27 @@
-import { Outlet } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Heading from "../component/Heading";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cart from "../component/Cart";
 import Wishlist from "../component/Wishlist";
+import { getStoredCard } from "../utility/utility";
 
 const Dashboard = () => {
+    const allData = useLoaderData()
+
+    const [cart, setCart] = useState([])
+
+    
+
+    useEffect(()=>{
+        const getCartData = getStoredCard();
+        setCart(allData.filter(product=>getCartData.includes(product.product_id)));
+       
+        
+
+    },[allData])
+
+    console.log(cart);
+   
 
     const [activeButton, setActiveButton] = useState('cart')
 
@@ -26,7 +43,7 @@ const Dashboard = () => {
 
             <section className="max-w-7xl mx-auto">
                 {
-                    activeButton === 'cart'? <Cart></Cart> : <Wishlist></Wishlist>
+                    activeButton === 'cart'? <Cart cartData={cart}></Cart> : <Wishlist></Wishlist>
                 }
             </section>
 

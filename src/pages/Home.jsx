@@ -49,7 +49,7 @@ const Home = () => {
             {/* products section start */}
             <h2 className="font-bold text-2xl md:text-4xl text-center md:mt-96">Explore Cutting-Edge Gadgets</h2>
 
-            <section className="max-w-7xl mx-auto flex gap-5 mt-14 pb-20">
+            <section className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-5 mt-14 pb-20">
                 {/* Categories Sidebar start */}
                 <aside className="flex flex-col gap-4 bg-[#FFFFFF] p-3 rounded-xl max-h-fit min-w-fit">
                     <NavLink to={'/'} className='font-medium text-lg text-[#09080F99] px-7 py-3 bg-[#09080F0D] rounded-full'>All Products</NavLink>

@@ -23,7 +23,7 @@ const AllProducts = () => {
     return (
         <div className="md:flex gap-8">
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
                     allData.map(data => <Card data={data} key={data.product_id}></Card>)
                 }

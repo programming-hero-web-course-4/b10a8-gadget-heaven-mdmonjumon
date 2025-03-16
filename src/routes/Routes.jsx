@@ -63,6 +63,7 @@ const routes = createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <Dashboard></Dashboard>,
+                loader: () => fetch('/public/fakeData.json'),
             },
             {
                 path: '/productDetails/:Id',

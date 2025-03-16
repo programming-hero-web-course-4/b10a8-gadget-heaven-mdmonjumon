@@ -11,7 +11,7 @@ const Card = ({ data }) => {
     return (
         <div>
         
-            <div className="card shadow-sm bg-white p-5">
+            <div className="card shadow-sm items-center bg-white p-5">
                 <figure>
                     <img className="rounded-lg p-3"
                         src={product_image}
