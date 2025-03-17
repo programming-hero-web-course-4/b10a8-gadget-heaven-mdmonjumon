@@ -3,12 +3,14 @@ import { LuHeart } from "react-icons/lu";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
 
-const Navbar = () => {
+
+const Navbar = ({ cartLength, wishlistLength }) => {
 
     const link = <>
         <NavLink to={'/'} className={({ isActive }) => isActive ? 'font-bold underline underline-offset-4' : ''} ><li>Home</li></NavLink>
         <NavLink to={'/statistics'} className={({ isActive }) => isActive ? 'font-bold underline underline-offset-4 text-[#9538E2]' : ''}><li>Statistics</li></NavLink>
         <NavLink to={'/dashboard'} className={({ isActive }) => isActive ? 'font-bold underline underline-offset-4 text-[#9538E2]' : ''}><li>Dashboard</li></NavLink>
+
     </>
 
     const { pathname } = useLocation();
@@ -41,8 +43,24 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="navbar-end space-x-5">
-                        <Link to={'/dashboard'}> <button className="p-3 border border-[#0B0B0B1A] rounded-full bg-white"><HiOutlineShoppingCart /> </button></Link>
-                        <Link to={'/dashboard'}> <button className="p-3 border border-[#0B0B0B1A] rounded-full bg-white"><LuHeart /> </button></Link>
+                        <Link to={'/dashboard'}>
+                            <button className="p-3 border border-[#0B0B0B1A] rounded-full bg-white relative"><HiOutlineShoppingCart />
+                                {
+                                    cartLength ? <span className="absolute -top-4 -translate-x-1/2">{cartLength}</span>:''
+                                }
+                            </button>
+                        </Link>
+
+
+                        <Link to={'/dashboard'}>
+                            <button className="p-3 border border-[#0B0B0B1A] rounded-full bg-white relative"><LuHeart />
+
+                                {
+                                    wishlistLength? <span className="absolute -top-4 -translate-x-1/2">{wishlistLength}</span> :''
+                                }
+
+                            </button>
+                        </Link>
                     </div>
                 </div>
 

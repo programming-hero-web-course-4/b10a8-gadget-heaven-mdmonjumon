@@ -194,7 +194,7 @@
         "price": 649.99,
         "description": "Garmin Fenix 7 Multisport GPS Watch.",
         "Specification": ["Multisport GPS", "Heart Rate Monitor", "Solar Charging"],
-        "availability": true,
+        "availability": false,
         "rating": 4.9
       }
     ]

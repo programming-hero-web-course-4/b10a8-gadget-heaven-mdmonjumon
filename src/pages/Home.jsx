@@ -35,7 +35,7 @@ const Home = () => {
 
                 <div
                     className="w-11/12 md:w-3/5 md:h-[500px] absolute top-4/5 md:top-3/4 left-1/2 transform -translate-x-1/2 border-2 border-white p-4 rounded-3xl bg-gradient-to-t from-[#ffffff] to-[#ffffff49]">
-                    <img className="size-full object-cover rounded-3xl" src={bannerImg} alt="" />
+                    <img className="size-full object-cover rounded-3xl" src={bannerImg} alt={bannerImg} />
 
                 </div>
 
