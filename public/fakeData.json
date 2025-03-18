@@ -196,5 +196,8 @@
         "Specification": ["Multisport GPS", "Heart Rate Monitor", "Solar Charging"],
         "availability": false,
         "rating": 4.9
+      },
+      {
+        "category": "Desktop"
       }
     ]

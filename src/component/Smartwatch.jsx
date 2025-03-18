@@ -15,7 +15,7 @@ const Smartwatch = () => {
     return (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {
-                smartwatch.map(smartwatch=> <Card data={smartwatch}></Card>)
+                smartwatch.map(smartwatch=> <Card key={smartwatch.product_id} data={smartwatch}></Card>)
             }
         </div>
     );

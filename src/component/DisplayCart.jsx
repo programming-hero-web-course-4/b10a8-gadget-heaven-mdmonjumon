@@ -11,22 +11,6 @@ const DisplayCart = ({ product, status, handleRemoveItem}) => {
     } = product;
 
 
-    // const handleRemoveItem = (productId, status) => {
-    //     if(status=== 'cart'){
-    //         const storedCart = getStoredCard();
-    //         const remainingCartData = storedCart.filter(id=>id !== productId);
-    //         const remainingCartDataStr = JSON.stringify(remainingCartData)
-    //         localStorage.setItem('cart-list', remainingCartDataStr);
-    //     }
-    //     else{
-    //         const storedWishlist = getStoredWishlistCart();
-    //         const remainingWishlistData = storedWishlist.filter(id=>id !== productId);
-    //         const remainingWishlistDataStr = JSON.stringify(remainingWishlistData);
-    //         localStorage.setItem('wish-list', remainingWishlistDataStr);
-    //     }
-    // }
-
-
     return (
         <div className="space-y-5 bg-white p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-3">
             <div className="space-y-5 flex flex-col md:flex-row items-center gap-3">

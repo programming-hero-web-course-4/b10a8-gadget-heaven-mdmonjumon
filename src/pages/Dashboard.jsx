@@ -12,6 +12,7 @@ const Dashboard = () => {
 
     // For cart component start here
     const [cart, setCart] = useState([])
+
     useEffect(() => {
         const getCartData = getStoredCard();
         setCart(allData.filter(product => getCartData.includes(product.product_id)));
@@ -56,7 +57,6 @@ const Dashboard = () => {
 
     const handleSortByPrice = () => {
         const descendingSort = [...cart].sort((a, b) => b.price - a.price);
-        console.log(descendingSort);
         setCart(descendingSort);
     }
     // sort by Price end here
@@ -83,7 +83,7 @@ const Dashboard = () => {
             <section className="max-w-7xl mx-auto">
                 {
                     activeButton === 'cart' ?
-                        <Cart cartData={cart} handleRemoveItem={handleRemoveItem} handleSortByPrice={handleSortByPrice} ></Cart>
+                        <Cart cartData={cart} handleRemoveItem={handleRemoveItem} handleSortByPrice={handleSortByPrice} setCart={setCart} ></Cart>
                         : <Wishlist wishlistData={wishlist} handleRemoveItem={handleRemoveItem}></Wishlist>
                 }
             </section>

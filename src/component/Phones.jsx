@@ -13,12 +13,10 @@ const Phones = () => {
 
     },[allData])
 
-    console.log(phones);
-
     return (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {
-                phones.map(phone=> <Card data={phone}></Card>)
+                phones.map(phone=> <Card key={phone.product_id} data={phone}></Card>)
             }
         </div>
     );

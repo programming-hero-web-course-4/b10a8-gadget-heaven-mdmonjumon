@@ -16,7 +16,7 @@ const Accessories = () => {
     return (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {
-                accessories.map(accessory=> <Card data={accessory}></Card>)
+                accessories.map(accessory=> <Card key={accessory.product_id} data={accessory}></Card>)
             }
         </div>
     );

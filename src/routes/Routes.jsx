@@ -10,6 +10,7 @@ import Laptop from "../component/Laptop";
 import Phones from "../component/Phones";
 import Accessories from "../component/Accessories";
 import Smartwatch from "../component/Smartwatch";
+import Desktop from "../component/Desktop";
 
 
 
@@ -50,6 +51,11 @@ const routes = createBrowserRouter([
                         path: '/smartwatch',
                         loader: () => fetch('../fakeData.json'),
                         element: <Smartwatch></Smartwatch>
+                    },
+                    {
+                        path: '/desktop',
+                        loader: () => fetch('../fakeData.json'),
+                        element:<Desktop></Desktop>
                     },
                 ]
             },

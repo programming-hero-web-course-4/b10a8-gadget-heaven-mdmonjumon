@@ -1,8 +1,8 @@
 
 const ErrorPage = () => {
     return (
-        <div>
-            <h3>error page</h3>
+        <div className="text-3xl flex justify-center items-center min-h-screen">
+            <h3>404 error</h3>
         </div>
     );
 };
