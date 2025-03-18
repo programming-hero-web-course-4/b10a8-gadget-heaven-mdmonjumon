@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { GrSort } from 'react-icons/gr';
 import DisplayCart from './DisplayCart';
-import { useOutletContext } from 'react-router-dom';
+import { useNavigate, useOutletContext } from 'react-router-dom';
+import { TbAdjustments } from 'react-icons/tb';
+import { RiVerifiedBadgeFill } from 'react-icons/ri';
 
 const Cart = ({ cartData, handleRemoveItem, handleSortByPrice, setCart }) => {
 
+
     const [cartPrice, setCartPrice] = useState(0);
 
-    const {setCartLength} = useOutletContext()
-    
+    const { setCartLength } = useOutletContext()
+
+    const [openModal, setOpenModal] = useState(false)
+    const [showModalPrice, setShowModalPrice] = useState(0)
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         const totalPrice = cartData.reduce((previous, current) => previous + current.price, 0)
@@ -17,14 +23,21 @@ const Cart = ({ cartData, handleRemoveItem, handleSortByPrice, setCart }) => {
 
 
     const handlePurchase = () => {
-        setCartPrice(0)
+        setShowModalPrice(cartPrice)
         localStorage.removeItem('cart-list')
         setCart([])
         setCartLength(0)
-        
+        setOpenModal(true)
+        setCartPrice(0)
     }
 
-    
+    const handleCloseModal = () => {
+        setOpenModal(false)
+        setTimeout(() => {
+            navigate('/')
+        }, 1000)
+        setShowModalPrice(cartPrice)
+    }
 
     return (
         <div>
@@ -35,9 +48,9 @@ const Cart = ({ cartData, handleRemoveItem, handleSortByPrice, setCart }) => {
                     <button
                         disabled={cartPrice === 0}
                         onClick={handleSortByPrice}
-                        className={`font-semibold text-lg px-5 py-2 rounded-4xl inset-shadow-[#0B0B0B] flex items-center gap-3 
+                        className={`font-semibold text-lg px-5 py-2 rounded-4xl inset-shadow-[#0B0B0B] flex items-center gap-2 
                             ${cartPrice === 0 ? 'cursor-not-allowed bg-stone-300 border-0 text-white' : 'cursor-pointer border-2 text-[#9538E2]'}
-                        `}>Sort by Price <GrSort />
+                        `}>Sort by Price <TbAdjustments className='text-3xl' />
                     </button>
 
                     <button disabled={cartPrice === 0}
@@ -58,6 +71,24 @@ const Cart = ({ cartData, handleRemoveItem, handleSortByPrice, setCart }) => {
                     ></DisplayCart>)
                 }
             </div>
+
+
+            {/* modal */}
+            
+            <dialog className={`modal modal-bottom sm:modal-middle ${openModal ? 'modal-open' : ''}`}>
+                <div className="modal-box place-items-center space-y-2 py-5 ">
+                    <p><span> <RiVerifiedBadgeFill className='text-8xl text-green-400' /> </span></p>
+                    <h3 className='font-bold text-4xl'>Payment Successfully</h3>
+                    <div className="divider w-full"></div>
+                    <p className="text-lg">Thanks for Purchasing.</p>
+                    <p><span className='text-lg font-medium'>Total: $ {showModalPrice.toFixed(2)}</span></p>
+                    <div className="modal-action">
+                        <form method="dialog">
+                            <button onClick={handleCloseModal} className="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
         </div>
     );
 };
