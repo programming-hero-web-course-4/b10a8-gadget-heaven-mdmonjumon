@@ -25,7 +25,6 @@ const Dashboard = () => {
     useEffect(() => {
         const getWishlistData = getStoredWishlistCart()
         setWishlist(allData.filter(product => getWishlistData.includes(product.product_id)))
-
     }, [allData])
     // For wishlist component end here
 

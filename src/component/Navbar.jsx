@@ -46,7 +46,7 @@ const Navbar = ({ cartLength, wishlistLength }) => {
                         <Link to={'/dashboard'}>
                             <button className="p-3 border border-[#0B0B0B1A] rounded-full bg-white relative"><HiOutlineShoppingCart />
                                 {
-                                    cartLength ? <span className="absolute -top-4 -translate-x-1/2">{cartLength}</span>:''
+                                    cartLength ? <span className={`absolute text-lg -top-6 font-medium -translate-x-1/2 ${pathname === '/' && 'text-emerald-200'}`}>{cartLength}</span>:''
                                 }
                             </button>
                         </Link>
@@ -56,7 +56,7 @@ const Navbar = ({ cartLength, wishlistLength }) => {
                             <button className="p-3 border border-[#0B0B0B1A] rounded-full bg-white relative"><LuHeart />
 
                                 {
-                                    wishlistLength? <span className="absolute -top-4 -translate-x-1/2">{wishlistLength}</span> :''
+                                    wishlistLength? <span className={`absolute text-lg -top-6 font-medium -translate-x-1/2 ${pathname === '/' && 'text-emerald-200'}`}>{wishlistLength}</span> :''
                                 }
 
                             </button>
@@ -70,3 +70,4 @@ const Navbar = ({ cartLength, wishlistLength }) => {
 };
 
 export default Navbar;
+

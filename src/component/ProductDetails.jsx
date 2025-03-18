@@ -5,7 +5,7 @@ import ReactStars from 'react-stars';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
 import { LuHeart } from 'react-icons/lu';
 import { addToLS, addWishlistToLS, getStoredCard, getStoredWishlistCart } from '../utility/utility';
-
+import { useEffect, useState } from 'react';
 
 
 const ProductDetails = () => {
@@ -25,12 +25,23 @@ const ProductDetails = () => {
     } = singleData;
 
 
-    const { setCartLength , setWishlistLength} = useOutletContext();
+    const { setCartLength, setWishlistLength } = useOutletContext();
+
+    const [disableCartBtn, setDisableCartBtn] = useState([])
+    const [disableWishlistBtn, setDisableWishlistBtn] = useState([])
+
+    useEffect(() => {
+        setDisableCartBtn(getStoredCard())
+        setDisableWishlistBtn(getStoredWishlistCart())
+
+    }, [])
 
     //add to cart start here
     const handleAddToCart = id => {
         addToLS(id)
-        setCartLength(getStoredCard().length)
+        const cart = getStoredCard()
+        setDisableCartBtn(cart)
+        setCartLength(cart.length)
     }
     //add to cart end here
 
@@ -39,10 +50,11 @@ const ProductDetails = () => {
     const handleAddToWishlist = id => {
         addWishlistToLS(id)
         setWishlistLength(getStoredWishlistCart().length)
+        setDisableWishlistBtn(getStoredWishlistCart())
     }
     //  Add to wishlist end here
 
-    
+
 
     return (
         <div className='bg-[#F7F7F7] pb-6 lg:pb-96'>
@@ -94,14 +106,21 @@ const ProductDetails = () => {
                     <div className="card-actions justify-start">
 
                         <button onClick={() => handleAddToCart(product_id)}
-                            className={`font-bold text-lg text-white bg-[#9538E2] px-5 py-2 rounded-full flex items-center gap-3 cursor-pointer`}>Add To Card
+                            disabled={disableCartBtn.includes(product_id)}
+                            className={`font-bold text-lg text-white bg-[#9538E2] px-5 py-2 rounded-full flex items-center gap-3  
+                            ${disableCartBtn.includes(product_id) ? 'bg-[#9538e223] text-[#C6C6C6] cursor-not-allowed' : 'cursor-pointer'}
+                            `}>{
+                                disableCartBtn.includes(product_id) ? 'Added to Cart' : 'Add to Cart'
+                            }
 
                             <HiOutlineShoppingCart className='text-xl' />
                         </button>
 
-
-
-                        <button onClick={() => handleAddToWishlist(product_id)} className="p-3 border border-[#0B0B0B1A] rounded-full bg-white cursor-pointer"><LuHeart /> </button>
+                        <button onClick={() => handleAddToWishlist(product_id)}
+                            disabled={disableWishlistBtn.includes(product_id)}
+                            className={`p-3 border border-[#0B0B0B1A] rounded-full bg-white 
+                            ${disableWishlistBtn.includes(product_id) ? 'text-[#C6C6C6] cursor-not-allowed' : 'cursor-pointer'}`}><LuHeart />
+                        </button>
                     </div>
                 </div>
             </div>
