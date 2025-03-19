@@ -10,6 +10,7 @@ const Navbar = ({ cartLength, wishlistLength }) => {
         <NavLink to={'/'} className={({ isActive }) => isActive ? 'font-bold underline underline-offset-4' : ''} ><li>Home</li></NavLink>
         <NavLink to={'/statistics'} className={({ isActive }) => isActive ? 'font-bold underline underline-offset-4 text-[#9538E2]' : ''}><li>Statistics</li></NavLink>
         <NavLink to={'/dashboard'} className={({ isActive }) => isActive ? 'font-bold underline underline-offset-4 text-[#9538E2]' : ''}><li>Dashboard</li></NavLink>
+        <NavLink to={'/contact'} className={({ isActive }) => isActive ? 'font-bold underline underline-offset-4 text-[#9538E2]' : ''}><li>Contact Us</li></NavLink>
 
     </>
 

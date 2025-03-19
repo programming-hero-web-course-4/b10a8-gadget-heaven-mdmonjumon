@@ -6,6 +6,7 @@ import { HiOutlineShoppingCart } from 'react-icons/hi';
 import { LuHeart } from 'react-icons/lu';
 import { addToLS, addWishlistToLS, getStoredCard, getStoredWishlistCart } from '../utility/utility';
 import { useEffect, useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
 
 
 const ProductDetails = () => {
@@ -42,6 +43,7 @@ const ProductDetails = () => {
         const cart = getStoredCard()
         setDisableCartBtn(cart)
         setCartLength(cart.length)
+        toast("Item added to Cart");
     }
     //add to cart end here
 
@@ -51,6 +53,7 @@ const ProductDetails = () => {
         addWishlistToLS(id)
         setWishlistLength(getStoredWishlistCart().length)
         setDisableWishlistBtn(getStoredWishlistCart())
+        toast("Item added to Wishlist");
     }
     //  Add to wishlist end here
 
@@ -125,6 +128,14 @@ const ProductDetails = () => {
                 </div>
             </div>
 
+            <ToastContainer
+                position="top-center"
+                autoClose={3000}
+                closeOnClick={true}
+                pauseOnHover
+                theme="light"
+
+            />
         </div>
     );
 };

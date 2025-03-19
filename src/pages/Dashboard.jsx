@@ -70,6 +70,7 @@ const Dashboard = () => {
 
     return (
         <div>
+            <title>Dashboard | Gadget Heaven</title>
             <section className="bg-[#9538E2] py-10">
                 <Heading
                     heading={'Dashboard'}

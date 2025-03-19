@@ -25,6 +25,7 @@ const Home = () => {
 
     return (
         <div>
+            <title>Gadgets | Gadget Heaven</title>
             {/* banner section start */}
             <section
                 className={`lg:max-w-[1540px] mx-auto border-8 border-t-0 rounded-4xl border-[#F6F6F6] bg-[#9538E2] pt-24 pb-32 md:pb-56 relative mb-56 md:mb-80 

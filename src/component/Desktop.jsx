@@ -11,11 +11,8 @@ const Desktop = () => {
     }, [allData])
 
     return (
-        <div className="gap-6">
-
-            {
-                desktops.map(desktop=><Card key={desktop.category} data={desktop}> </Card>)
-            }
+        <div>
+            <div className="gap-6">{desktops.map(desktop => <Card key={desktop.category} data={desktop}> </Card>)}</div>
         </div>
     );
 };

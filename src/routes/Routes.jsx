@@ -11,6 +11,7 @@ import Phones from "../component/Phones";
 import Accessories from "../component/Accessories";
 import Smartwatch from "../component/Smartwatch";
 import Desktop from "../component/Desktop";
+import Contact from "../pages/Contact";
 
 
 
@@ -68,6 +69,10 @@ const routes = createBrowserRouter([
                 path: '/dashboard',
                 element: <Dashboard></Dashboard>,
                 loader: () => fetch('../fakeData.json'),
+            },
+            {
+                path: '/contact',
+                element: <Contact></Contact>
             },
             {
                 path: '/productDetails/:Id',

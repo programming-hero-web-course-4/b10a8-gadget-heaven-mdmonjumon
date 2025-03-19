@@ -11,6 +11,8 @@ const Statistics = () => {
     // const data = [{ name: 'Page A', uv: 400, pv: 2400, amt: 2400 }]
     return (
         <div>
+            <title>Statistics | Gadget Heaven</title>
+
             <section className="bg-[#9538E2] py-20">
                 <Heading
                     heading='Statistics'

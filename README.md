@@ -1,12 +1,21 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Title : Gadgets Heaven
 
-Currently, two official plugins are available:
+Live Website Link: https://malicious-meal.surge.sh/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Github Repository link: https://github.com/programming-hero-web-course-4/b10a8-gadget-heaven-mdmonjumon
 
-## Expanding the ESLint configuration
+## Here are some React fundamental concepts used in Gadget Heaven project:
+- #### useState()  : for State Management.
+- #### useEffect() : for manage Side Effects.
+- #### React Router : (react-router-dom) Handles page navigation (<Link/>, useNavigate, <NavLink/ >).
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## I have used Local Storage for handling and managing data.
+
+
+## Here are 5 key features of the Gadget Heaven:
+- Users can filter products by product category.
+- Users can add items to Wishlist.
+- Users can add items to Cart.
+- Users can sort cart items by price.
+- Users can see products details by clicking view product details.

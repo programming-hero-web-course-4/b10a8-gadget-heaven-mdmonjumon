@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 
 const Card = ({ data }) => {
@@ -8,6 +9,20 @@ const Card = ({ data }) => {
         product_image,
         price
     } = data;
+
+
+
+    const {pathname} = useLocation();
+    
+    const [noData, setNoData] = useState(false)
+
+    useEffect(()=>{
+        if(pathname === '/'){
+            setNoData(true)
+        }
+
+    },[pathname])
+
     return (
         <div>
 
@@ -29,7 +44,7 @@ const Card = ({ data }) => {
                 </div>
                     :
                     <div>
-                        <h2 className="text-center text-5xl font-bold">No Data Found</h2>
+                        <h2 className={`text-center text-5xl font-bold ${noData? 'hidden':''}`}>No Data Found</h2>
                     </div>
             }
 
